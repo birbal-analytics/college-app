@@ -26,16 +26,16 @@ class CollegeInfoPageState extends State<CollegeInfoPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(values.name),
-      ),
-      body:
+        appBar: new AppBar(
+          title: new Text(values.name),
+        ),
+        body:
         new Container(
           child: new Column(
               children: [new Text('Tuition: ${values.tuition}\n\n\nLocation: ${values.location}', style: new TextStyle(fontSize:50.0), textAlign: TextAlign.center,),
                 new RaisedButton(onPressed: returnToList)
               ]
-        ),
+          ),
         )
     );
   }

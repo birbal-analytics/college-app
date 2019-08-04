@@ -21,8 +21,8 @@ class _RootPageState extends State<RootPage> {
     switch(_authStatus) {
       case AuthStatus.notSignedIn:
         return new LoginPage(
-            auth: widget.auth,
-            onSignedIn: _signedIn,);
+          auth: widget.auth,
+          onSignedIn: _signedIn,);
       case AuthStatus.signedIn:
         return new CollegeListPage();
     }
@@ -33,12 +33,12 @@ class _RootPageState extends State<RootPage> {
     widget.auth.currentUser().then((userId) {
       setState(() {
         _authStatus = userId == null ? AuthStatus.notSignedIn : AuthStatus.signedIn;
-    });
+      });
     });
   }
   void _signedIn() {
     setState(() {
-    _authStatus = AuthStatus.signedIn;
+      _authStatus = AuthStatus.signedIn;
     });
   }
 }

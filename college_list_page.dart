@@ -52,16 +52,20 @@ class _CollegeListPageState extends State<CollegeListPage> {
                     (BuildContext context, int index) => const Divider()
             )
         );
+        break;
       case (clickedOn.clicked):
         return new CollegeInfoPage(
           values: new CollegeInfo("yes", "yes", "yes"),
           back: returnToList,
-        );
+        );;
+        break;
+      default:
+        return null;
     }
   }
   void returnToList() {
     setState((){
-        clickedOnState = clickedOn.notClicked;
+      clickedOnState = clickedOn.notClicked;
 
     }
     );
